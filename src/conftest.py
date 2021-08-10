@@ -110,14 +110,13 @@ def parse_config(device_file_name):
     if not os.path.exists(path):
         pytest.fail('{0} is not a valid config'.format(path))
 
-    #
     if not DEVICE_CONFIGS.get(path, False):
         DEVICE_CONFIGS[path] = CiscoConfParse(
             config=path, ignore_blank_lines=False, )
 
     return DEVICE_CONFIGS[path]
 
-@pytest.fixture(scope='session')
+# Calling fixtures directly is unsupported since pytest 4.0
 def all_configs():
     """Retrieve all configurations from TESTCONFIG['audits']['config_dir']"""
 

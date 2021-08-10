@@ -18,13 +18,13 @@ Installation
 
 - Copy or clone this repository
 - Install [ciscoconfparse], ``pip install --upgrade ciscoconfparse``
-- Install [pytest], ``pip install --upgrade pytest==2.4.6``
+- Install [pytest], ``pip install --upgrade pytest==6.1.2``
 
 Running demo tests
 ==================
 
 - ``cd src/``
-- Run one test against all configs: ``py.test --device [config-file-name] [name-of-test]``
+- Run one test against all configs: ``py.test [name-of-test]``
 - Run one test against one of the configs: ``py.test --device [config-file-name] [name-of-test]``
 
 License and Copyright
